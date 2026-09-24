@@ -238,11 +238,6 @@
       color: var(--gold-light);
     }
 
-    /* Icon nav: three equal hit areas over the icons image */
-    .icon-nav { display: grid; grid-template-columns: repeat(3, 1fr); }
-    .icon-nav > img { position: absolute; inset: 0; width: 100%; pointer-events: none; }
-    .icon-nav a { aspect-ratio: 241 / 187; }
-
     .fade-edges {
       -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, #000 60%, transparent 100%);
       mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, #000 60%, transparent 100%);
@@ -380,12 +375,9 @@
         <p class="countdown-done" hidden>¡Llegó la noche!</p>
       </div>
 
-      <nav class="el icon-nav reveal" style="--t:625;--l:40;--w:280" aria-label="Secciones">
-        <img src="assets/nav-iconos.webp" alt="">
-        <a id="nav-maps" target="_blank" rel="noopener noreferrer" aria-label="Ubicación: Club UPCN, Candelaria. Abrir en Google Maps"></a>
-        <a id="nav-rsvp" target="_blank" rel="noopener noreferrer" aria-label="Confirmar asistencia por WhatsApp"></a>
-        <a href="#dress" aria-label="Dress code"></a>
-      </nav>
+      <a class="el link-card reveal" style="--t:622;--l:122.5;--w:115" href="#dress">
+        <img src="assets/btn-dress.webp" alt="Dress code elegante. Ver detalles">
+      </a>
     </section>
 
     <!-- 4. Location, RSVP and deadline -->
@@ -449,8 +441,6 @@
       const rsvpUrl =
         `https://wa.me/${CONFIG.whatsappNumber}?text=${encodeURIComponent(CONFIG.whatsappText)}`;
       $("#rsvp-link").href = rsvpUrl;
-      $("#nav-maps").href = CONFIG.mapsUrl;
-      $("#nav-rsvp").href = rsvpUrl;
 
       /* Sparkles */
       document.querySelectorAll(".sparkles").forEach((box) => {
