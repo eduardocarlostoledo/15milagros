@@ -16,14 +16,14 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mis XV · Milagros">
   <meta property="og:title" content="Mis XV · Milagros">
-  <meta property="og:description" content="Tienes una invitación. Baile de máscaras · Sábado 7 de noviembre, 21:00 hs · Club UPCN, Candelaria.">
+  <meta property="og:description" content="Tenés una invitación. Baile de máscaras · Sábado 7 de noviembre, 21:00 hs · Club UPCN, Candelaria.">
   <meta property="og:url" content="https://invitacionxvmilagros.netlify.app/">
   <meta property="og:image" content="https://invitacionxvmilagros.netlify.app/og.jpg">
   <meta property="og:image:secure_url" content="https://invitacionxvmilagros.netlify.app/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Sobre negro con sello XV y máscaras doradas: tienes una invitación">
+  <meta property="og:image:alt" content="Sobre negro con sello XV y máscaras doradas: tenés una invitación">
   <!-- Square fallback for clients that render square thumbnails -->
   <meta property="og:image" content="https://invitacionxvmilagros.netlify.app/og-square.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -31,9 +31,9 @@
   <meta property="og:image:height" content="684">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mis XV · Milagros">
-  <meta name="twitter:description" content="Tienes una invitación. Sábado 7 de noviembre, 21:00 hs.">
+  <meta name="twitter:description" content="Tenés una invitación. Sábado 7 de noviembre, 21:00 hs.">
   <meta name="twitter:image" content="https://invitacionxvmilagros.netlify.app/og.jpg">
-  <meta name="twitter:image:alt" content="Sobre negro con sello XV y máscaras doradas: tienes una invitación">
+  <meta name="twitter:image:alt" content="Sobre negro con sello XV y máscaras doradas: tenés una invitación">
   <link rel="canonical" href="https://invitacionxvmilagros.netlify.app/">
   <link rel="image_src" href="https://invitacionxvmilagros.netlify.app/og.jpg">
   <link rel="icon" type="image/webp" href="assets/logo.webp">
@@ -41,7 +41,7 @@
   <link rel="preload" as="image" href="assets/sobre-cerrado.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Arapey&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Arapey&family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #000;
@@ -170,6 +170,29 @@
     }
 
     .hint { animation: blink 2.4s ease-in-out infinite; }
+
+    /* Live text (replaces the Canva raster) so copy can be edited */
+    .invite-hint { margin: 0; text-align: center; line-height: 1; }
+    .invite-script {
+      display: block;
+      font-family: "Great Vibes", cursive;
+      font-size: calc(27 * 100cqw / 360);
+      color: #fff;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, .8);
+    }
+    .invite-caps {
+      display: block;
+      margin-top: .35em;
+      font-family: "Cormorant Garamond", "Times New Roman", serif;
+      font-weight: 600;
+      font-size: calc(13.5 * 100cqw / 360);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, #e9d3a1 0%, #c4a687 55%, #9c7b4f 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
 
     /* Music button with curved "Dale Play" label */
     .music {
@@ -337,8 +360,10 @@
               type="button" aria-label="Romper el sello y abrir la invitación">
         <img src="assets/sobre-cerrado.webp" alt="">
       </button>
-      <img class="el hint" style="--t:457;--l:87;--w:186" src="assets/txt-rompe-sello.webp"
-           alt="Tienes una invitación. Rompe el sello">
+      <p class="el hint invite-hint" style="--t:452;--l:40;--w:280">
+        <span class="invite-script">Tenés una invitación…</span>
+        <span class="invite-caps">Rompé el sello</span>
+      </p>
 
       <button id="music-toggle" class="el tap music" style="--t:180;--l:293;--w:44"
               type="button" aria-pressed="false" aria-label="Reproducir música" hidden>
@@ -363,7 +388,7 @@
         <img src="assets/sobre-abierto.webp" alt="">
       </button>
       <img class="el hint read-hint" style="--t:429;--l:91;--w:178" src="assets/txt-toca-leer.webp"
-           alt="Es especial. Toca para leer">
+           alt="Es especial. Tocá para leer">
       <img class="el letter-text" style="--t:478;--l:11.4;--w:337" src="assets/txt-carta.webp"
            alt="Entre sueños y realidad, hoy florece mi historia en un capítulo inolvidable que apenas comienza. Te invito a ser parte de este destello mágico y compartir conmigo una noche donde cada detalle es un sueño hecho realidad, celebrando la alegría de este momento tan especial.">
       <a class="scroll-cue" href="#event" aria-label="Ver más">
